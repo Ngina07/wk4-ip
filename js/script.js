@@ -124,48 +124,7 @@ $(document).ready(function () {
 
 
         });
+    });
+});
 
-//         $("button#complete").click(function () {
-//             $("button#complete").hide();
-//             $("button.add-pizza").hide();
-//             $("button.deliver").slideDown(1000);
-//             $("#plusdelivery").slideDown(1000);
-//             console.log("Your total bill is Kshs. " + completeTotal);
-//             $("#pizzatotal").append("Your bill is sh. " + completeTotal);
-//         });
-//         $("button.deliver").click(function () {
-//             $(".table").hide();
-//             $(".choice h2").hide();
-//             $(".delivery").slideDown(1000);
-//             $("#plusdelivery").hide();
-//             $("button.deliver").hide();
-//             $("#pizzatotal").hide();
-//             let deliveryamount = completeTotal + 200;
-//             console.log("You will pay Ksh. " + deliveryamount + " on delivery");
-//             $("#totalbill").append("Your total is: " + deliveryamount);
-//         });
-//         $("button#final-order").click(function (event) {
-//             event.preventDefault();
-//             $("#pizzatotal").hide();
-//             $(".delivery").hide();
-//             $("button#final-order").hide();
-//             let deliveryamount = completeTotal + 200;
-//             console.log("Your final bill is Kshs. " + deliveryamount);
-//             let person = $("input#name").val();
-//             let phone = $("input#phone").val();
-//             let location = $("input#location").val();
-//             if ($("input#name").val() && $("input#phone").val() && $("input#location").val() != "") {
 
-//                 $("#finalmessage").append(person + ", We have recieved your order. It will be delivered to " + location + ". Make sure you have Ksh. " + deliveryamount);
-//                 $("#totalamount").hide();
-//                 $("#finalmessage").slideDown(1200);
-//             }
-//             else {
-//                 alert("Please fill in the delivery details and try again.");
-//                 $(".delivery").show();
-//                 $("button#final-order").show();
-//             }
-//         });
-//         event.preventDefault();
-//     });
-// });
