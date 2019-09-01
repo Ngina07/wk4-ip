@@ -69,59 +69,61 @@ $(document).ready(function () {
         $("#pizzatopping").innerHTML(ptopping.join(", "));
         $("#totals").innerHTML(total);
 
-//         $("button.add-pizza").click(function () {
-//             let ptype = $("#type option:selected").val();
-//             let psize = $("#size option:selected").val();
-//             let pcrust = $("#crust option:selected").val();
-//             let ptopping = [];
-//             $.each($("input[name='toppings']:checked"), function () {
-//                 ptopping.push($(this).val());
-//             });
-//             console.log(ptopping.join(", "));
-//             switch (psize) {
-//                 case "Large":
-//                     price = 1000;
-//                     console.log("The price is " + price);
-//                     break;
-//                 case "Medium":
-//                     price = 800;
-//                     console.log("The price is " + price);
-//                     break;
-//                 case "Small":
-//                     price = 600;
-//                     console.log("The price is " + price);
-//                 default:
-//                     console.log("error");
-//             }
-//             switch (pcrust) {
-//                 case "Regular":
-//                     crust_price = 100;
-//                     break;
-//                 case "Crispy":
-//                     crust_price = 150;
-//                     break;
-//                 case "Gluten-free":
-//                     crust_price = 200;
-//                     break;
-//                 case "Stuffed":
-//                     crust_price = 250;
-//                     break;
-//                 default:
-//                     console.log("No price");
-//             }
-//             let topping_value = ptopping.length * 70;
-//             console.log("The toppings selected add up to " + topping_value);
-//             total = price + crust_price + topping_value;
-//             console.log(total);
-//             completeTotal = completeTotal + total;
-//             console.log(completeTotal);
+        // To enable user to add pizza
 
-//             var newOrder = new Getpizza(ptype, psize, pcrust, ptopping, total);
-//             $("#inputorder").append('<tr><td id="pizzatype">' + newOrder.type + '</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">' + newOrder.crust + '</td><td id="pizzatopping">' + newOrder.topping + '</td><td id="total">' + newOrder.total + '</td></tr>');
-//             console.log(newOrder);
+        $("button.add-pizza").click(function () {
+            let ptype = $("#type option:selected").val();
+            let psize = $("#size option:selected").val();
+            let pcrust = $("#crust option:selected").val();
+            let ptopping = [];
+            $.each($("input[name='toppings']:checked"), function () {
+                ptopping.push($(this).val());
+            });
+            console.log(ptopping.join(", "));
+            switch (psize) {
+                case "Large":
+                    price = 1000;
+                    alert("The price is " + price);
+                    break;
+                case "Medium":
+                    price = 800;
+                    alert("The price is " + price);
+                    break;
+                case "Small":
+                    price = 600;
+                    alert("The price is " + price);
+                default:
+                    alert("error");
+            }
+            switch (pcrust) {
+                case "Regular":
+                    crust_price = 100;
+                    break;
+                case "Crispy":
+                    crust_price = 150;
+                    break;
+                case "Gluten-free":
+                    crust_price = 200;
+                    break;
+                case "Stuffed":
+                    crust_price = 250;
+                    break;
+                default:
+                    alert("No price");
+            }
+            let topping_value = ptopping.length * 70;
+            alert("The toppings selected add up to " + topping_value);
+            total = price + crust_price + topping_value;
+            alert(total);
+            completeTotal = completeTotal + total;
+            alert(completeTotal);
+
+            var newOrder = new Getpizza(ptype, psize, pcrust, ptopping, total);
+            $("#inputorder").append('<tr><td id="pizzatype">' + newOrder.type + '</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">' + newOrder.crust + '</td><td id="pizzatopping">' + newOrder.topping + '</td><td id="total">' + newOrder.total + '</td></tr>');
+            alert(newOrder);
 
 
-//         });
+        });
 
 //         $("button#complete").click(function () {
 //             $("button#complete").hide();
