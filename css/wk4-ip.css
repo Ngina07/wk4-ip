@@ -1,0 +1,154 @@
+body {
+     font-family: Arial, Helvetica, sans-serif;
+     color: white;    
+     background-color: black;
+}
+/* #nav {
+    height: 70px;
+    background: black;
+    display: block;
+    position: fixed;
+    width: 100%;
+    z-index: 99999;
+    transition: all ease .5s;
+}  
+#logo {
+    color: #fff;
+    padding: 20px;
+    font-size: 18px;
+    transition: all ease .5s;
+}
+.logo2 {
+    color: #fff;
+    padding: 20px;
+    font-size: 18px;
+    transition: all ease .5s;
+    float: right;
+    animation: bounce 3s infinite;
+ }
+ @keyframes bounce{
+    0%, 20%, 40%, 60%, 80%, 100%  {
+       transform: translateY(0);
+    }
+    40% {
+       transform: translateY(-55px);
+    }
+    80% {
+       transform: translateY(-45px);
+    } 
+ }
+#nav.change {
+    background: red;
+    transition: all ease .5s;
+} */
+#slider {
+     overflow: hidden;
+     width: 100%;
+    
+ }
+ #slider figure {
+     position: relative;
+     width: 500%;
+     margin: 0%;
+     left: 0%;
+     animation: 20s slider infinite;
+ }
+ #slider figure img {
+     width: 20%;
+     float: left;
+ }
+ @keyframes slider {
+     0% {
+         left: 0%;
+     }
+     20% {
+        left: 0%;
+    }
+    25% {
+        left: -100%;
+    }
+    45% {
+        left: -100%;
+    }
+    50% {
+        left: -200%;
+    }
+    70% {
+        left: -200%;
+    }
+    75% {
+        left: -300%;
+    }
+    90% {
+        left: -300%;
+    }
+    100% {
+        left: -400%;
+    }
+ }
+/* .box {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.box span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-bottom: 1px solid #fff;
+    border-right: 1px solid #fff;
+    transform: rotate(45deg);
+    animation: animate 2s infinite;
+}
+.box span:nth-child(1)
+{
+    animation-delay: -0.2s;
+}
+.box span:nth-child(2)
+{
+    animation-delay: -0.4s;
+}
+@keyframes animate 
+{
+    0%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 2;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+.initiallyHidden {
+	display:none;
+}
+
+.menu {
+	margin-left:20px;
+}
+#order {
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+#form  {
+    text-align: center;
+    align-content: center;
+}
+html{
+    scroll-behavior: smooth;
+}
+footer {
+    text-align: center;
+    font-size: 20px;
+    font-family: cursive;
+}
+.centerAligned {
+    text-align: center;
+} */
