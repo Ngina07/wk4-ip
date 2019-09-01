@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <!-- <div id="nav">
+    <div id="nav">
             <div id="logo">Pizza Express</div>
             <a href="http://www.facebook.com"><img class="logo2" src="../delani/images/social_icons/facebook.png"
                     alt="Facebook icon"></a>
@@ -21,7 +21,7 @@
                     alt="Twitter icon"></a>
             <a href="http://www.pinterest.com"><img class="logo2" src="../delani/images/social_icons/pinterest.png"
                     alt="Pinterest icon"></a>
-        </div> -->
+        </div>
 
     <!-- Add slider section  -->
     <div id="slider">
@@ -52,10 +52,9 @@
                     <label for="select" class="center">Type Of Pizza:</label>
                     <select class="browser-default custom-select custom-select-md mb-3 " id="type">
                         <option value="Meat Deluxe">Meat Deluxe</option>
-                        <option value="BBQ Macon">BBQ Macon</option>
+                        <option value="BBQ chilli">BBQ chilli</option>
                         <option value="Chicken PeriPeri">Periperi Chicken</option>
-                        <option value="Buffalo Cauliflower Wing with Tofu Blue Cheese Spread">Buffalo Cauliflower Wing
-                            with Tofu Blue Cheese Spread</option>
+                        <option value="Hawaian">Hawaian</option>
                         <option value="Vegan Margherita">Vegan Margherita</option>
                         <option value="Eggplant and Caramelized Onions">Eggplant and Caramelized Onions</option>
                     </select><br><br>
@@ -79,7 +78,7 @@
                     <input type="checkbox" name="toppings" id="Cauliflower" value="Cauliflower"> Cauliflower<br>
                     <input type="checkbox" name="toppings" id="Tomato" value="Cherry Tomato Slices"> Cherry Tomato
                     Slices<br>
-                    <input type="checkbox" name="toppings" id="Eggplant" value="Eggplant"> Eggplant<br><br>
+                    <input type="checkbox" name="toppings" id="Extracheese" value="Extracheese"> Extracheeese<br><br>
                     <button type="submit" class="btn btn-info proceed" id="continue">Continue</button>
                     <br>
                     <br>
@@ -92,7 +91,7 @@
                 <br><br>
                 <h2>This Is Your Order</h2>
                 <table class="table">
-                    <thead>
+                    <thead id="tablehead">
                         <tr>
                             <th scope="col">Type</th>
                             <th scope="col">Size</th>
@@ -120,10 +119,10 @@
             <button class="btn btn-danger" id="complete">Complete Order</button>
             <button class="btn btn-danger deliver">Delivery</button>
         </div>
-    </div><br><br> 
+    </div><br><br>
 
     <!-- Add sectioon for user to input their address -->
-     <div class="delivery">
+    <div class="delivery">
         <div class="container">
             <form action="">
                 <div class="form-group">
@@ -134,11 +133,17 @@
                 </div>
             </form>
         </div>
-    </div> 
-    <footer><p>Pizza Express | Surround yourself with pizza not negativity</p>
-        <p>Contact Us: </p>
-    
-    </footer> 
+    </div>
+    <footer>
+        <p>Pizza Express | Surround yourself with pizza not negativity</p>
+        <p>Contact Us: <a href="http://www.facebook.com"><img class="logo2"
+                    src="images/facebook.png" alt="Facebook icon"></a>
+            <a href="http://www.twitter.com"><img class="logo2" src="images/twitter.png"
+                    alt="Twitter icon"></a>
+            <a href="http://www.pinterest.com"><img class="logo2" src="images/pinterest.png"
+                    alt="Pinterest icon"></a> </p>
+
+    </footer>
 </body>
 
-</html> 
+</html>
