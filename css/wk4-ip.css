@@ -86,7 +86,7 @@ body {
         left: -400%;
     }
  }
-/* .box {
+ .box {
     color: white;
     position: absolute;
     top: 50%;
@@ -142,7 +142,7 @@ body {
     align-content: center;
 }
 html{
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; */
 }
 footer {
     text-align: center;
@@ -151,4 +151,4 @@ footer {
 }
 .centerAligned {
     text-align: center;
-} */
+} 
