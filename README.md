@@ -4,11 +4,19 @@
 ## Description
 This is a webpage for PIZZALICIOUS . It allows users to placetheir pizza orders online and customize their pizzas with different toppings. It also provides a delivery option.Click <a href="https://ngina07.github.io/delani-studio/">here</a> to access the live site on Github pages
 
+## BDD
+* When the user clicks on the arrows on the landing page they is directed to the ordering forms
+* The user then selects the pizza they want then submits it
+* The user can add their pizza selection
+* The user then gets their total bill when they complete order
+* For delivery the user clicks on the delivery button which leads to a form where they enter their address and personal information for pizza delivery
+
+
 
 ## Setup/Installation Requirements
 To access this application you will require a browser and working network.
 ## Known Bugs
-There are no known bugs , however all commits labeled updates/updated were made when trying to fix the error that was making the livesite load a blank white page. This error has since been corrected.
+The total amount added sometimes adds to an incorrect amount.Attempting to fix this problem
 ## Technologies Used
 This webpage was created using HTML and CSS, Bootstrap and JavaScript  language as well as jquery library
 ## Support and contact details
