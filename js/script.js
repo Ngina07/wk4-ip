@@ -1,130 +1,273 @@
-//  Toggle to order section
-$(document).ready(function () {
-    $("#tablehead").click(function () {
-        $(this).next("div").slideToggle("slow");
-    });
-});
+// let price ;
+// let crust_price;
+// let tooping_price ;
+// let total = 0
 
-// validate ordering forms and toppings' radios
+// function GetPizza (name,size,crust,topping,total){
+//   this.name = name;
+//   this.size = size;
+//   this.crust= crust;
+//   this.topping = topping;
+//   this.total = total;
+// };
+// // proceed button
+//   $("button.continue").click(function(event){
 
-var price, crust_price, topping_price;
-let total = 0;
-function Getpizza(type, size, crust, topping, total) {
-    this.type = type;
+//     let pName = $("#type option:selected").val();
+//     let pSize = $("#size option:selected").val();
+//     let pCrust = $("#crust option:selected").val();
+//     let pTopping = [];
+
+//     $.each($("input[name='toppings']:checked"),function(){
+//       pTopping.push($(this).val());
+//     })
+
+//     switch(pSize){
+//       case "0":
+//         price= 0;
+//         break;
+//       case 'Large':
+//         price = 1000;
+//         break;
+//       case "Medium":
+//         price = 800;
+//         break;
+//       case "Small":
+//         price = 600;
+//       default:
+//         console.log("error");
+//     }
+// alert(price);
+//     switch(pCrust){
+//       case "0":
+//         c_price = 0;
+//         break;
+//       case "Regular":
+//         c_price = 300;
+//         break;
+//       case "Crispy":
+//         c_price = 200;
+//         break;
+//       case "Gluten-free":
+//         c_price = 250;
+//         break;
+//       case "Stuffed":
+//         c_price = 300;
+//         break;
+//       default:
+//         console.log("error");
+//     }
+
+//   let topping_value = pTopping.length * 100;
+
+//   if((pSize == "0") && (pCrust == "0")){
+//     $("button.continue").show();
+//     // $("#infor").show();
+//     $("div.choice").hide();
+//     alert("Please select the Pizza size and crust");
+//   }
+//   else {
+
+//     $("button.continue").hide();
+//     // $("#infor").hide();
+//     $("div.choice").slideDown(1200);
+//   }
+
+//   total = price + c_price + topping_value;
+//   let checkoutTotal = 0;
+//   checkoutTotal = checkoutTotal + total;
+
+//   $("#pizzaname").html($(".name option:selected").val());
+//   $("#pizzasize").html( $("#size option:selected").val());
+//   $("#pizzacrust").html($("#crust option:selected").val());
+//   // $("#pizzatopping").html(pTopping.join(", "));
+//   $("#totals").html(total);
+
+//   // add button
+// //   $("button.addPizza").click(function(){
+// //     let pName = $(".name option:selected").val();
+// //     let pSize = $("#size option:selected").val();
+// //     let pCrust = $("#crust option:selected").val();
+// //     let pTopping = []; 
+
+// //     switch(pSize){
+// //       case "0":
+// //         price= 0;
+// //         break;
+// //       case 'large':
+// //         price = 1500;
+// //         break;
+// //       case "medium":
+// //         price = 950;
+// //         break;
+// //       case "small":
+// //         price = 700;
+// //       default:
+// //         console.log("error");
+// //     }
+
+// //     switch(pCrust){
+// //       case "0":
+// //         c_price = 0;
+// //         break;
+// //       case "Crispy":
+// //         c_price = 300;
+// //         break;
+// //       case "Stuffed":
+// //         c_price = 200;
+// //         break;
+// //       case "Gluten-free":
+// //         c_price = 250;
+// //         break;
+// //       case "Flatbread":
+// //         c_price = 300;
+// //       case "Focaccia":
+// //         c_price = 200;
+// //         break;
+// //       default:
+// //         console.log("error");
+// //     }
+
+// //     let topping_value = pTopping.length * 100;
+// //     total = price + c_price + topping_value;
+
+
+// //     checkoutTotal = checkoutTotal + total;
+
+
+// //     newOrder = new GetPizza(pName,pSize,pCrust,pTopping,total);
+// //     $("#ordersmade").append(`<tr><td id="pizzaname">`+newOrder.name +`</td><td id="pizzasize"> `+ newOrder.size +`</td><td id="pizzasize"> `+ newOrder.crust +`</td><td id="pizzasize"> `+ newOrder.topping +`</td><td id="pizzasize"> `+ newOrder.total +`</td></tr>`);
+// //   })
+
+// //   $("button#checkout").click(function(){
+// //     $("button#checkout").hide();
+// //     $("button.addPizza").hide();
+// //     $("button#deliver").slideDown(1000);
+// //     $("#pizzatotal").append("Your bill is ksh. " +  checkoutTotal);
+// //   })
+
+//   // home button
+// //   $("button.deliver").click(function(){
+// //     $(".pizzatable").hide();
+// //     $(".choice h2").hide();
+// //     $(".delivery").slideDown(1000);
+// //     $("#addedprice").hide();
+// //     $("button.deliver").hide();
+// //     $("#pizzatotal").hide();
+
+// //     let deliveryAmount = checkoutTotal + 150;
+// //     $("#totalbill").append("Your bill plus delivery fee is: "+ deliveryAmount);
+// //   })
+
+// //   $("button#final-order").click(function(event){
+// //     event.preventDefault();
+// //     $("#pizzatotal").hide();
+// //     $(".delivery").hide();
+// //     $("button#final-order").hide();
+// //     let deliceryAmount = checkoutTotal+ 150;
+
+// //     let person = $("input#name").val();
+// //     let phone = $("input#phone").val();
+// //     let location = $("input#location").val();
+
+// //     if ($("input#name").val() && $("input#phone").val() && $("input#location").val()!=""){
+// //       $("#finallmessage").append(person+", We have recieved your order and the delivery wil be made  at  "+location+ ". Prepare ksh. "+ deliceryAmount);
+// //       $("#totalbill").hide();
+// //       $("#finallmessage").slideDown(1200);
+// //     }else{
+// //       alert("Please fill in the deliver details");
+// //       $(".delivery").show();
+// //       $("button#final-order").show();
+// //     }
+
+// //   })
+//   event.preventDefault();
+//   })
+let price;
+let crust_price;
+let tooping_price;
+let total = 0
+
+function GetPizza(name, size, crust, topping, total) {
+    this.name = name;
     this.size = size;
     this.crust = crust;
     this.topping = topping;
     this.total = total;
-}
-$(document).ready(function () {
-    $("button#continue").click(function (event) {
-        let psize = $("#size option:selected").val();
-        let pcrust = $("#crust option:selected").val();
-        let ptopping = [];
-        $.each($("input[name='toppings']:checked"), function () {
-            ptopping.push($(this).val());
-        });
-        console.log(ptopping.join(", "));
-        switch (psize) {
-            case "Large":
-                price = 1000;
-                alert(price);
-                break;
-            case "Medium":
-                price = 800;
-                alert(price);
-                break;
-            case "Small":
-                price = 600;
-                console.log(price);
-            default:
-                alert("error");
-        }
-        switch (pcrust) {
-            case "Regular":
-                crust_price = 100;
-                break;
-            case "Crispy":
-                crust_price = 150;
-                break;
-            case "Gluten-free":
-                crust_price = 200;
-                break;
-            case "Stuffed":
-                crust_price = 250;
-                break;
+};
 
-            default:
-                alert("No price");
-        }
-        let topping_value = ptopping.length * 70;
-        alert("toppings value" + topping_value);
-        total = price + crust_price + topping_value;
-        alert(total);
-        let completeTotal = 0;
-        completeTotal = completeTotal + total;
-        $("#pizzatype").innerHTML($("#type option:selected").val());
-        $("#pizzasize").innerHTML($("#size option:selected").val());
-        $("#pizzacrust").innerHTML($("#crust option:selected").val());
-        $("#pizzatopping").innerHTML(ptopping.join(", "));
-        $("#totals").innerHTML(total);
+$("button#continue").click(function (event) {
 
-        // To enable user to add pizza
+    let pName = $("#type option:selected").val();
+    let pSize = $("#size option:selected").val();
+    let pCrust = $("#crust option:selected").val();
+    let pTopping = [];
 
-        $("button.add-pizza").click(function () {
-            let ptype = $("#type option:selected").val();
-            let psize = $("#size option:selected").val();
-            let pcrust = $("#crust option:selected").val();
-            let ptopping = [];
-            $.each($("input[name='toppings']:checked"), function () {
-                ptopping.push($(this).val());
-            });
-            console.log(ptopping.join(", "));
-            switch (psize) {
-                case "Large":
-                    price = 1000;
-                    alert("The price is " + price);
-                    break;
-                case "Medium":
-                    price = 800;
-                    alert("The price is " + price);
-                    break;
-                case "Small":
-                    price = 600;
-                    alert("The price is " + price);
-                default:
-                    alert("error");
-            }
-            switch (pcrust) {
-                case "Regular":
-                    crust_price = 100;
-                    break;
-                case "Crispy":
-                    crust_price = 150;
-                    break;
-                case "Gluten-free":
-                    crust_price = 200;
-                    break;
-                case "Stuffed":
-                    crust_price = 250;
-                    break;
-                default:
-                    alert("No price");
-            }
-            let topping_value = ptopping.length * 70;
-            alert("The toppings selected add up to " + topping_value);
-            total = price + crust_price + topping_value;
-            alert(total);
-            completeTotal = completeTotal + total;
-            alert(completeTotal);
+    $.each($("input[name='toppings']:checked"), function () {
+        pTopping.push($(this).val());
+    })
 
-            var newOrder = new Getpizza(ptype, psize, pcrust, ptopping, total);
-            $("#inputorder").append('<tr><td id="pizzatype">' + newOrder.type + '</td><td id="pizzasize">' + newOrder.size + '</td><td id="pizzacrust">' + newOrder.crust + '</td><td id="pizzatopping">' + newOrder.topping + '</td><td id="total">' + newOrder.total + '</td></tr>');
-            alert(newOrder);
+    switch (pSize) {
+        case "0":
+            price = 0;
+            break;
+        case 'Large':
+            price = 1000;
+            break;
+        case "Medium":
+            price = 800;
+            break;
+        case "Small":
+            price = 600;
+        default:
+            console.log("error");
+    }
+// alert(pSize)
+    switch (pCrust) {
+        case "0":
+            c_price = 0;
+            break;
+        case "Crispy":
+            c_price = 300;
+            break;
+        case "Stuffed":
+            c_price = 200;
+            break;
+        case "Gluten-free":
+            c_price = 250;
+            break;
+        case "Flatbread":
+            c_price = 300;
+        case "Focaccia":
+            c_price = 200;
+            break;
+        default:
+            console.log("error");
+    }
+    // alert(pCrust)
 
 
-        });
-    });
-});
+   let topping_value = pTopping.length * 100;
 
+   if((pSize == "0") && (pCrust == "0")){
+     $("button.continue").show();
+     $("div#choice").hide();
+     alert("Please select the Pizza size and crust");
+   }
+   else {
 
+     $("button#continue").hide();
+      $("#infor").hide();
+     $("div#choice").slideDown(1200);
+   }
+
+   total = price + c_price + topping_value;
+   let checkoutTotal = 0;
+   checkoutTotal = checkoutTotal + total;
+
+   $("#pizzaname").html($(".name option:selected").val());
+   $("#pizzasize").html( $("#size option:selected").val());
+   $("#pizzacrust").html($("#crust option:selected").val());
+    $("#pizzatopping").html(pTopping.join(", "));
+   $("#totals").html(total);
+})

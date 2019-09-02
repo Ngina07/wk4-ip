@@ -1,17 +1,9 @@
 body {
      font-family: Arial, Helvetica, sans-serif;
-     color: white;    
+     color:white;    
      background-color: black;
+     align-content: center;
 }
- /* #nav {
-    height: 70px;
-    background: yellowgreen;
-    display: block;
-    position: fixed;
-    width: 100%;
-    z-index: 99999;
-    transition: all ease .5s;
-}   */
 
 .logo2 {
     color: #fff;
@@ -32,13 +24,24 @@ body {
     } 
  }
 
-#slider {
-     overflow: hidden;
-     width: 100%;
+ header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/pizzaaa.png) no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    align-content: center;
+    color: whitesmoke; 
+    font-family: cursive;
     
-    
- }
- #slider figure {
+}
+header h1 {
+    padding-top: 200px;
+    padding-bottom: 620px;
+    font-size: 60px;
+}
+
+  
+ 
+ /* #slider figure {
      position: relative;
      width: 500%;
      margin: 0%;
@@ -49,7 +52,7 @@ body {
      width: 20%;
      float: left;
      
- }
+ } */
  @keyframes slider {
      0% {
          left: 0%;
@@ -145,3 +148,16 @@ footer {
 .centerAligned {
     text-align: center;
 } 
+
+.table{
+    color: white; 
+}
+#choice{
+    display: none;
+}
+/* #add {
+    padding-bottom: px;
+} */
+#buttons {
+    padding-top: 10px;
+}
