@@ -161,3 +161,6 @@ footer {
 #buttons {
     padding-top: 10px;
 }
+#userform{
+    display: none;  
+}

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
     <title>Pizzalicious</title>
     <link rel="stylesheet" type="text/css" href="./css/bootstrap.css">
     <link rel="stylesheet" type="text/css" href="./css/wk4-ip.css">
@@ -57,7 +58,7 @@
                         <option value="Gluten-free">Gluten-free - Ksh 200</option>
                         <option value="Stuffed">Stuffed - Ksh 250</option>
                     </select><br><br>
-                    <label for="Toppings">Toppings. Each For Ksh 70.</label><br>
+                    <label for="toppings">Toppings. Each For Ksh 70.</label><br>
                     <div><input type="checkbox" name="toppings" id="bacon" value="bacon"> Bacon<br></div>
                     <div><input type="checkbox" name="toppings" id="Pepperoni" value="Pepperoni"> Pepperoni<br></div>
                     <div><input type="checkbox" name="toppings" id="Chicken" value="Chicken"> Chicken<br></div>
@@ -106,7 +107,7 @@
             </div>
             <div id="buttons">
                 <button class="btn btn-danger allbtn" id="complete">Complete Order</button>
-                <button class="btn btn-danger deliver allbtn">Delivery</button>
+                <button class="btn btn-danger deliver allbtn" id="deliver">Delivery</button>
             </div>
         </div>
     </div><br><br>
@@ -114,11 +115,11 @@
     <!-- Add sectioon for user to input their address -->
     <div class="delivery">
         <div class="container">
-            <form action="">
+            <form action="" id="userform">
                 <div class="form-group">
-                    <input type="text" id="name" class="form-control mb-3" placeholder="Name">
-                    <input type="number" id="phone" class="form-control mb-3" placeholder="Phone Number">
-                    <input type="text" id="location" class="form-control mb-3" placeholder="Delivery location">
+                    <input type="text" id="name" class="form-control mb-3" id="pname"placeholder="Name">
+                    <input type="number" id="phone" class="form-control mb-3" id="pnum" placeholder="Phone Number">
+                    <input type="text" id="location" class="form-control mb-3"  id="plocation" placeholder="Delivery location">
                     <button class="btn btn-success" id="final-order">Place order</button>
                 </div>
             </form>
