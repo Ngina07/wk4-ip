@@ -36,6 +36,7 @@ function GetPizza(name, size, crust, topping, total) {
                 break;
             case "Small":
                 price = 600;
+                break;
             default:
                 console.log("Select size");
         }
@@ -109,6 +110,7 @@ function GetPizza(name, size, crust, topping, total) {
                 break;
             case "Small":
                 price = 600;
+                break;
             default:
                 console.log("error");
         }
@@ -170,6 +172,7 @@ function GetPizza(name, size, crust, topping, total) {
                 break;
             case "Small":
                 price = 600;
+                break;
             default:
                 console.log("error");
         }
@@ -201,6 +204,8 @@ function GetPizza(name, size, crust, topping, total) {
         // checkoutTotal = 0;
     
         checkoutTotal = checkoutTotal + total;
+        let deliveryAmount = checkoutTotal + 200;
+        $("#totalamount").append("Your bill plus delivery fee is: "+ deliveryAmount);
         // alert(total);
     
         $("button#complete").hide();
@@ -210,3 +215,20 @@ function GetPizza(name, size, crust, topping, total) {
       })
 
 
+
+      $("button#deliver").click(function(){
+          $("form#userform").show();
+      })
+
+
+
+
+
+      $("button#final-order").click(function(event){
+          event.preventDefault();
+        let person = $("input#name").val();
+        let phone = $("input#num").val();
+        let location = $("input#location").val();
+        // alert(person)
+        alert(person  + " We have received your order.It will be delivered at " + location);
+      })
