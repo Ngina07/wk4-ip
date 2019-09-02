@@ -220,10 +220,6 @@ function GetPizza(name, size, crust, topping, total) {
           $("form#userform").show();
       })
 
-
-
-
-
       $("button#final-order").click(function(event){
           event.preventDefault();
         let person = $("input#name").val();

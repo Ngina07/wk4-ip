@@ -2,7 +2,7 @@
 #### This is a webpage for PIZZALICIOUS, a pizza restaurant that allows users to order for pizza online , 26/08/2019
 #### By Phillis Ngina Njoroge
 ## Description
-This is a webpage for PIZZALICIOUS . It allows users to placetheir pizza orders online and customize their pizzas with different toppings. It also provides a delivery option.Click <a href="https://ngina07.github.io/delani-studio/">here</a> to access the live site on Github pages
+This is a webpage for PIZZALICIOUS . It allows users to placetheir pizza orders online and customize their pizzas with different toppings. It also provides a delivery option.Click <a href="https://ngina07.github.io/wk4-ip/">here</a> to access the live site on Github pages
 
 ## BDD
 * When the user clicks on the arrows on the landing page they is directed to the ordering forms
